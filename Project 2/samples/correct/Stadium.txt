@@ -1,0 +1,27 @@
+function drawObject(a=Size(1000,1000),b=Stroke(1))
+{
+	newObject SukruSaracogluStadium(){
+	stadium=Rectangle();
+	goal= Rectangle();
+	penaltyArea= Rectangle();
+	middlLine= Line(true);
+	middleCircle= Oval();
+	
+	//painting the stadium to the green
+	draw(stadium,Size(1000,1000),Location(0,0),fillColor(Color(GREEN)),fillState(true));
+	
+	//drawing gates of game for both of the teams
+	draw(goal,Size(20,75),Location(0,400),Stroke(3),fillColor(255,255,255));		
+	draw(goal,Size(20,75),Location(1000,400),Stroke(3),fillColor(255,255,255));
+	
+	//drawing penalty area for both sides of stadium
+	draw(penaltyArea,Size(200,400),Location(1000,300),Stroke(3),fillColor(255,255,255));
+	draw(penaltyArea,Size(200,400),Location(0,300),Stroke(2),fillColor(255,255,255));
+	
+	//drawing middle circle of the game.
+	draw(middleCircle,Size(450,550),Location(450,550),Stroke(2),fillColor(255,255,255));
+	
+	//drawing line which will cross the middle circle from the center
+	draw(middlLine,Size(500,0),Location(500,1000),Stroke(2),fillColor(255,255,255));
+	}
+}

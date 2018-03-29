@@ -1,0 +1,6 @@
+function drawObject( a=Size(1000, 1000), b=Stroke(1) )
+{
+	draw( Oval(), Size(100, 100), Location(-50, -50));
+}
+draw( Line(true), Size(0,100), Location(30, 30)); //statement at outside of a function causes a general syntax error
+					

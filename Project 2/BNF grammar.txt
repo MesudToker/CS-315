@@ -1,0 +1,154 @@
+program :
+	func_list
+
+func_list:
+	func_def func_list |
+
+stmt_list:
+	statement stmt_list |
+
+statement:
+    expr ENDSTMT |
+	for_stmt |
+	while_stmt |
+	newObject_def |
+	if_stmt
+
+expr:
+	func_call |
+	return_stmt |
+	assignment |
+	array_def
+
+return_stmt:
+	RETURN |
+	RETURN art_expr
+
+array:
+	ID LBRACKET art_expr RBRACKET 
+	
+blocklist:
+	LBRACE arg_list RBRACE 
+	
+array_def:
+	ID LBRACKET art_expr RBRACKET ASSIGN blocklist |
+	ID LBRACKET art_expr RBRACKET ASSIGN rhs 
+
+newObject_def:
+	NEWOBJECT ID LPARAM param_list RPARAM LBRACE stmt_list RBRACE
+
+func_def:
+	FUNCTION ID LPARAM param_list RPARAM LBRACE stmt_list RBRACE 
+	
+func_call:
+	ID LPARAM arg_list RPARAM 
+
+param_list:
+	param param_list_tail |
+
+param_list_tail:
+	COMMA param param_list_tail |
+
+param:
+	ID |
+	ID ASSIGN rhs
+
+assignment:
+	ID ASSIGN rhs |
+	ID PLUS PLUS |
+	ID MINUS MINUS 
+
+rhs:
+	art_expr |
+	conditional
+
+arg_list:
+	arg arg_list_tail |
+		
+
+arg_list_tail:
+	COMMA arg arg_list_tail |
+
+arg:
+	rhs
+
+art_expr:
+	art_expr add term |
+	term
+
+term:
+	term mul factor |
+	factor
+
+factor:
+	operand |
+	LPARAM art_expr RPARAM
+
+add:
+   PLUS |
+	MINUS
+
+mul:
+	STAR |
+	DIV
+
+operand:
+	PRECOLOR |
+	integer |
+	float |
+	array |
+	variable |
+	func_call
+
+float:
+	FLOAT |
+	MINUS FLOAT |
+	PLUS FLOAT
+
+integer:
+	INT |
+	MINUS INT |
+	PLUS INT
+
+boolean:
+	BOOL |
+	NOT BOOL
+
+bool_op:
+	AND |
+	OR |
+	LT |
+	GT |
+	LTE |
+	GTE |
+	EQUAL |
+	NOTEQUAL
+
+variable:
+	ID 
+
+for_stmt:
+	FOR LPARAM assignment ENDSTMT loop_cond ENDSTMT assignment RPARAM LBRACE stmt_list RBRACE
+
+loop_cond:
+	conditional |
+	func_call |
+	variable
+
+while_stmt:
+	WHILE LPARAM loop_cond RPARAM LBRACE stmt_list RBRACE
+
+conditional:
+	boolean |
+	boolean bool_op conditional |
+	boolean bool_op art_expr |
+	art_expr bool_op conditional |
+	art_expr bool_op art_expr |
+	LPARAM conditional RPARAM
+
+
+if_stmt:
+	IF LPARAM loop_cond RPARAM LBRACE stmt_list RBRACE else_stmt
+
+else_stmt:
+	ELSE LBRACE stmt_list RBRACE |

@@ -1,0 +1,5 @@
+function drawObject(a=Size(1000, 1000), b=Stroke(1))
+{
+	arr[2] = {1,2};
+	arr[a+] = 3; //A valid arithmetic expression or a a statement is needed between [ and ] 
+}

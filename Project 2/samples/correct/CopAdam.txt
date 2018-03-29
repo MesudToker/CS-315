@@ -1,0 +1,12 @@
+function drawObject (a=Size( 5000,3000), b=Stroke(2)){
+	
+	newObject trashMan()
+	{
+	draw( Oval(), Size(100, 100), Location(100,100));
+	draw( Line(true), Size(150,400), Location(150,200));
+	draw( Line(false), Size(50,300), Location(150,300));
+	draw( Line(false), Size(250,300), Location(150,300));
+	draw( Line(true), Size(75,450), Location(150,400));
+	draw( Line(true), Size(225,450), Location(150,400));
+	}
+}

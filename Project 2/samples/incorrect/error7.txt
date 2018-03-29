@@ -1,0 +1,6 @@
+function drawObject(a=Size(1000, 1000), b=Stroke(1))
+{
+
+	a = 5;
+	c = a + x; //variable "x" has to be defined		
+}

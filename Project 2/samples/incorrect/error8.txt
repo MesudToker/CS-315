@@ -1,0 +1,8 @@
+function drawObject(a=Size(1000, 1000), b=Stroke(1))
+{
+	a = 0;
+	for( i = 0; i + 5; i = i+1) //In the condition part, conditional expression is needed
+	{
+		a = a+1;	
+	}
+}

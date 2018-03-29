@@ -1,0 +1,9 @@
+function drawObject(a=Size(1000, 1000), b=Stroke(1))
+{
+	a = 5;
+	b = 6;
+	if(a==5)) //A close parantesis is redundant
+	{
+		b--;	
+	}
+}

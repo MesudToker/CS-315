@@ -1,0 +1,5 @@
+function drawObject(a=Size(1000, 1000), b=Stroke(1))
+{
+	arr1[2] = {1,2};
+	arr2[3] = {1, 2, 3; // '}' is needed.
+}

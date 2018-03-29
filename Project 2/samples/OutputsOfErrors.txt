@@ -1,0 +1,38 @@
+Outputs of Errors
+
+Error 1. 
+error at line 5: syntax error
+
+Error 2.
+error at line 4: syntax error
+error at line 4: expected ';'
+
+Error 3.
+error at line 4: array arr2 is not defined
+
+Error 4.
+error at line 4: syntax error
+error at line 4: a valid arithmetic expression expected between '[' and ']'
+
+Error 5.
+error at line 4: syntax error
+error at line 4: expected '}'
+error at line 5: expected ';'
+
+Error 6.
+error at line 9: function bar is not defined
+
+Error 7.
+error at line 5: variable x is not defined
+
+Error 8.
+error at line 4: syntax error
+error at line 4: conditional expression expected
+
+Error 9.
+error at line 5: syntax error
+error at line 5: conditional expression expected
+
+Error 10.
+error at line 5: variable noofplayers is not defined
+error at line 5: variable noofdecks is not defined

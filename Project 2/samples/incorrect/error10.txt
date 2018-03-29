@@ -1,0 +1,9 @@
+function drawObject(a=Size(1000, 1000), b=Stroke(1))
+{
+	noOfPlayers = 5;
+	noOfDecks= 3;
+	for( i = 0; i < noofplayers + noofdecks; i++)  //  variable names are case-sensitive
+	{
+		draw(Oval(),Size(100,100),Location(0,0));
+	}
+}
