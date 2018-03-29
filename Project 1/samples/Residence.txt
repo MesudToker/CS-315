@@ -1,0 +1,18 @@
+function drawObject newPict(Size(1000,1000), Stroke(1))
+{
+	newObject MyResidence(){
+	base= Rectangle();
+	roof= Line(true);
+	window= Rectangle(23);
+	
+	//base of the home
+	draw(base,Size(600,600),Location(200,1000),fillColor(Color(RED)));
+	
+	//both of the windows
+	draw(window,Size(50,50),Location(400,800),fillColor(Color(YELLOW)));
+	draw(window,Size(50,50),Location(600,800),fillColor(Color(YELLOW)));
+
+	//Roof of the home
+	draw(roof,Size(500,350),Location(200,400),fillColor(Color(BLACK)));
+	draw(roof,Size(800,200),Location(500,350),fillColor(Color(BLACK)));
+	draw(roof,Size(200,400),Location(800,200),fillColor(Color(BLACK)));
